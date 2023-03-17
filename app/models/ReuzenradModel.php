@@ -1,6 +1,6 @@
 <?php
 
-class ReuzenradModel 
+class ReuzenradModel
 {
     private $db;
 
@@ -9,7 +9,7 @@ class ReuzenradModel
         $this->db = new Database();
     }
 
-    public function getReuzenrad() 
+    public function getReuzenrad()
     {
         $sql = "SELECT Id
                         ,Naam
