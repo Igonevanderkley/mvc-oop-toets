@@ -1,14 +1,16 @@
 <?php
 
-class Reuzenrad extends BaseController 
+class Reuzenrad extends BaseController
 {
     private $reuzenradModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->reuzenradModel = $this->model('ReuzenradModel');
     }
 
-    public function index() {
+    public function index()
+    {
 
         $result = $this->reuzenradModel->getReuzenrad();
         // var_dump($result);
@@ -24,12 +26,11 @@ class Reuzenrad extends BaseController
                         </tr>";
         }
 
-    $data = [
-        'title' => 'Top 5 hoogste reuzenraden ter wereld',
-        'rows' => $rows
-    ];
+        $data = [
+            'title' => 'Top 5 hoogste reuzenraden ter wereld',
+            'rows' => $rows
+        ];
 
-    $this->view('Reuzenrad/index', $data);
-
+        $this->view('Reuzenrad/index', $data);
     }
 }
